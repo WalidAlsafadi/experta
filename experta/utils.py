@@ -5,9 +5,9 @@ from immutabledict import immutabledict as frozendict
 from .fieldconstraint import P
 
 try:
-    from collections.abc import Hashable  # noqa
+    from collections.abc import Hashable  # For Python 3.10 and above
 except ImportError:
-    from collections import Hashable  # noqa
+    from collections import Hashable  # For older Python versions
 
 
 class frozenlist(tuple):
